@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using foodies.Models;
@@ -11,9 +12,10 @@ using foodies.Models;
 namespace foodies.Migrations
 {
     [DbContext(typeof(foodiesdbContext))]
-    partial class foodiesdbContextModelSnapshot : ModelSnapshot
+    [Migration("20220314025437_AfterRemovedNewOtherItem")]
+    partial class AfterRemovedNewOtherItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

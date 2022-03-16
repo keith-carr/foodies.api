@@ -1,13 +1,13 @@
 using System;
 
-namespace Foodies.API.Models
+namespace foodies.Models
 {
-    public class Restaurant
+    public partial class Restaurant
     {
         public int Id {get; set;}
-        public string name {get; set;}
-        public decimal latitude {get; set;}
-        public decimal longitude {get; set;}
-        public int rating {get; set;} 
+        public string Name {get; set;}
+        public decimal Latitude {get; set;}
+        public decimal Longitude {get; set;}
+        public int Rating {get; set;} 
     }
 }

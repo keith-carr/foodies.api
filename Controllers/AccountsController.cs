@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using foodies.DBModels;
+using foodies.Models;
 
 namespace foodies.Controllers
 {
@@ -15,12 +15,12 @@ namespace foodies.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
+        public ActionResult<IEnumerable<Account>> GetAccounts()
         {
             return _context.Accounts.ToList();
         }
         [HttpPost]
-        public async Task<ActionResult<Account>> PostAccount(Account account)
+        public ActionResult<Account> PostAccount(Account account)
         {
             _context.Accounts.Add(account);
             Console.WriteLine(account.UserId);           

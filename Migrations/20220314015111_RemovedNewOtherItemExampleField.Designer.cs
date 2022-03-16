@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using foodies.DBModels;
+using foodies.Models;
 
 #nullable disable
 
 namespace foodies.Migrations
 {
     [DbContext(typeof(foodiesdbContext))]
-    [Migration("20220313005552_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220314015111_RemovedNewOtherItemExampleField")]
+    partial class RemovedNewOtherItemExampleField
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace foodies.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("foodies.DBModels.Account", b =>
+            modelBuilder.Entity("foodies.Models.Account", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()

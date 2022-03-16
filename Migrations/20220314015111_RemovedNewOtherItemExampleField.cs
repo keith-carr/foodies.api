@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace foodies.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class RemovedNewOtherItemExampleField : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using foodies.DBModels;
+using foodies.Models;
 
 #nullable disable
 
 namespace foodies.Migrations
 {
     [DbContext(typeof(foodiesdbContext))]
-    [Migration("20220313005825_SecondPath")]
-    partial class SecondPath
+    [Migration("20220314033213_Fourth")]
+    partial class Fourth
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace foodies.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("foodies.DBModels.Account", b =>
+            modelBuilder.Entity("foodies.Models.Account", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -46,10 +46,6 @@ namespace foodies.Migrations
                     b.Property<DateTime?>("LastLogin")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("last_login");
-
-                    b.Property<string>("NewOtherItem")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("Password")
                         .IsRequired()
